@@ -31,3 +31,4 @@ C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\refint\Catedra1D
 C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\Catedra1DWB.pdb
 C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\Catedra1DWB.genruntimeconfig.cache
 C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\ref\Catedra1DWB.dll
+C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\bin\Debug\net8.0\New Collection.postman_collection.json

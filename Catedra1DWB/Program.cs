@@ -24,7 +24,7 @@ app.Run();
 static async Task<IResult> CreateEBookAsync(DataContext _context, CreateBookDto createBook)
 {
     var oldBook = _context.Books.Where(b => b.Title == createBook.Title && b.Author == createBook.Author).FirstOrDefault();
-    if(oldBook is null){
+    if(oldBook != null){
         return Results.BadRequest();
     }
     var newbook = new Book{ Title = createBook.Title, Author = createBook.Author, Genre = createBook.Genre, Format = createBook.Format, Price = createBook.Price, IsAvailable = true, Stock = 0};
@@ -98,7 +98,7 @@ static async Task<IResult> IncrementStockEBookAsync (DataContext _context, int i
     return Results.Ok();
 }
 
-static async Task<IResult> BuyEBooksAsync (DataContext _context, int id, int copies,int totalPrice){
+static async Task<IResult> BuyEBooksAsync (DataContext _context, int id, [FromBody] int copies,int totalPrice){
     var oldbook = await _context.Books.FindAsync(id);
     if(oldbook is null) {
         return Results.NotFound();

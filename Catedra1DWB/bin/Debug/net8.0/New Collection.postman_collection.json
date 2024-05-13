@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "709b88c5-dc45-4981-a574-e31ab9c87542",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27393212",
+		"_collection_link": "https://www.postman.com/research-astronomer-54303749/workspace/catedra1idwm/collection/27393212-709b88c5-dc45-4981-a574-e31ab9c87542?action=share&source=collection_link&creator=27393212"
+	},
+	"item": [
+		{
+			"name": "CreateEbook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\" : \"Luna de Plutón\",\r\n    \"Author\" :\"Dross\",\r\n    \"Genre\": \"Terror\",\r\n    \"Format\": \"Formato\",\r\n    \"Price\" : 10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/ebook",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"ebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllEbooks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/ebook?genre=Terror&author=Dross&format=",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"ebook"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Terror"
+						},
+						{
+							"key": "author",
+							"value": "Dross"
+						},
+						{
+							"key": "format",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateEbook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\" : \"Luna de Plutón 2\",\r\n    \"Author\" :\"DrossRotzank\",\r\n    \"Genre\": \"Terror\",\r\n    \"Format\": \"Formato\",\r\n    \"Price\" : 10001\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/ebook/{{id}}",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"ebook",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeAvailability",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/ebook/{{id}}/change-availability",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"ebook",
+						"{{id}}",
+						"change-availability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IncrementStock",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newstock\" : 10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/ebook/{{id}}/increment-stock?newstock=1000",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"ebook",
+						"{{id}}",
+						"increment-stock"
+					],
+					"query": [
+						{
+							"key": "newstock",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuyEbook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"copies\": 2,\r\n    \"totalPrice\": 10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/ebook/purchase",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"ebook",
+						"purchase"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "copies",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "totalprice",
+							"value": "10000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEBOOK",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"copies\": 2,\r\n    \"totalPrice\": 10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/ebook/purchase",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"ebook",
+						"purchase"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "copies",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "totalprice",
+							"value": "10000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "http://localhost:5028",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
