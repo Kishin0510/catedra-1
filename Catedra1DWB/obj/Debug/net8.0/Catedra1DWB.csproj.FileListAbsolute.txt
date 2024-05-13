@@ -1,0 +1,6 @@
+C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\Catedra1DWB.csproj.AssemblyReference.cache
+C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\Catedra1DWB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\Catedra1DWB.AssemblyInfoInputs.cache
+C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\Catedra1DWB.AssemblyInfo.cs
+C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\Catedra1DWB.csproj.CoreCompileInputs.cache
+C:\Users\Alumnos\Desktop\catedra 1\Catedra1DWB\obj\Debug\net8.0\Catedra1DWB.MvcApplicationPartsAssemblyInfo.cache
